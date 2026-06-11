@@ -17,3 +17,6 @@ key.properties
 
 # macOS
 .DS_Store
+
+# Local developer scripts/notes
+dev-file
