@@ -1,0 +1,19 @@
+# Environment variables — NEVER commit these
+.env
+.env.local
+
+# Firebase — NEVER commit service account keys
+google-services.json
+GoogleService-Info.plist
+firebase-adminsdk*.json
+service-account.json
+key.properties
+*.keystore
+*.jks
+
+# IDE
+.idea/
+.vscode/
+
+# macOS
+.DS_Store
