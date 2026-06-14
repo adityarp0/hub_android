@@ -1,0 +1,50 @@
+name: Android CI
+
+on:
+  pull_request:
+    branches:
+      - main
+      - cg2
+
+  push:
+    branches:
+      - main
+      - cg2
+
+permissions:
+  contents: read
+
+jobs:
+  flutter-validation:
+    name: Flutter Validation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: "3.x"
+
+      - name: Verify Android Configuration Exists
+        run: |
+          test -d android
+          echo "Android configuration found."
+
+      - name: Verify Flutter Project Files
+        run: |
+          test -f pubspec.yaml
+
+      - name: Install Dependencies
+        run: flutter pub get
+
+      - name: Flutter Analyze
+        run: flutter analyze
+
+      - name: Run Unit Tests
+        run: flutter test
+
+      - name: Build Android APK
+        run: flutter build apk --debug
