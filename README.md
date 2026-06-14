@@ -86,4 +86,3 @@ Your demo should show:
 | iOS target | [`ios/`](../ios/) — same Flutter codebase |
 | Backend API | [`backend/`](../backend/) |
 | Notify service | [`notify/`](../notify/) — sends push notifications |
-
