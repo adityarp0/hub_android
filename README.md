@@ -78,3 +78,12 @@ Your demo should show:
 
 ---
 
+## Related
+
+| | |
+|---|---|
+| Flutter project | [`mobile/`](../mobile/) |
+| iOS target | [`ios/`](../ios/) — same Flutter codebase |
+| Backend API | [`backend/`](../backend/) |
+| Notify service | [`notify/`](../notify/) — sends push notifications |
+
